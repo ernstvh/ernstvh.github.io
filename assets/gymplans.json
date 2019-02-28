@@ -1,0 +1,344 @@
+[
+  {
+    "stage": "Correct",
+    "weeks": [[0,1,2],[0,1,2],[3,4,5],[3,4,5]],
+    "plans":
+    [
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises": [
+          { "key": "Dumbbell Split Squat", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Lying Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises": [
+          { "key": "Single Leg Hamstring Curl", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Seated Row Machine", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Dumbbell/Kettlebell Windmill", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} },
+          { "key": "Cable Woodchop High-Low", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "E","sets": 3, "rest": 60, "exercises":[
+          { "key": "Single Leg Bodyweight Deadlift", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises":[
+          { "key": "Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Kneeling Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Dumbbell Romanian Deadlift", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Lateral Pull Down", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Standing Cable Rear Delt Flyes", "do": {"reps": [15,20], "description":"", "time":-1} } ]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Single Leg Bosu Balance", "do": {"reps": [], "description":"as long as possible", "time":30} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 5, "rest": 120, "exercises": [
+          { "key": "Dumbbell Squat", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Seated Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Incline Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Ankle Directional Hops", "do": {"reps": [], "description":"around the clock", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Double Leg Balance On Bosu", "do": {"reps": [], "description":"", "time":60} }]
+        }
+      ],
+
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises": [
+          { "key": "Single Leg Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "45deg Incline Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises": [
+          { "key": "Glute Thrust", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Bench Dumbbell Row", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Kneeling Static Cable Press", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Ball Roll Outs", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Cable Woodchop Low-High", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "E","sets": 3, "rest": 60, "exercises":[
+          { "key": "Bodyweight Single Leg Deadlift On Bosu", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises":[
+          { "key": "Side Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Split Stance Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Dumbbell Romanian Deadlift", "do": {"reps": [10,15], "description":"", "time":-1} },
+          { "key": "Lateral Pull Down", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Dumbbell Bench Rear Delt Flyes", "do": {"reps": [15,20], "description":"", "time":-1} } ]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Plank Knee Tucks On Ball", "do": {"reps": [15,20], "description":"", "time":-1} },
+          { "key": "Elbow Knee Crunches", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Kneel On Gym Ball", "do": {"reps": [], "description":"", "time":60} } ]
+        }
+      ],
+      [
+        { "order": "A","sets": 5, "rest": 120, "exercises": [
+          { "key": "Lunges With Twist", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Press Ups", "do": {"reps": [15,25], "description":"", "time":-1} },
+          { "key": "Dumbbell Clean Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Wall Sit", "do": {"reps": [], "description":"as long as possible", "time":-1} },
+          { "key": "Press Up Position Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 30, "exercises":[
+          { "key": "Hop Onto Bosu", "do": {"reps": [], "description":"around the clock", "time":-1} } ]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Double Leg Balance On Bosu", "do": {"reps": [], "description":"", "time":60} }]
+        }
+      ]
+    ]
+  },
+  {
+    "stage": "Strength",
+    "weeks": [[0,1,2],[0,1,2],[3,4,5],[3,4,5]],
+    "plans":
+    [
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises": [
+          { "key": "Dumbbell Split Squat", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Lying Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises": [
+          { "key": "Single Leg Hamstring Curl", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Seated Row Machine", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Dumbbell/Kettlebell Windmill", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Plank", "do": {"reps": [], "description":"as long as possible", "time":-1}  },
+          { "key": "Cable Woodchop High-Low", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "E","sets": 3, "rest": 60, "exercises":[
+          { "key": "Single Leg Bodyweight Deadlift", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises":[
+          { "key": "Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Kneeling Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Dumbbell Romanian Deadlift", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Lateral Pull Down", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Standing Cable Rear Delt Flyes", "do": {"reps": [15,20], "description":"", "time":-1} } ]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Single Leg Bosu Balance", "do": {"reps": [], "description":"", "time":30} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 5, "rest": 120, "exercises": [
+          { "key": "Dumbbell Squat", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Seated Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Incline Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Ankle Directional Hops", "do": {"reps": [], "description":"around the clock", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Double Leg Balance On Bosu", "do": {"reps": [], "description":"", "time":60} }]
+        }
+      ],
+
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises": [
+          { "key": "Single Leg Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "45deg Incline Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises": [
+          { "key": "Glute Thrust", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Bench Dumbbell Row", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Kneeling Static Cable Press", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Ball Roll Outs", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Cable Woodchop Low-High", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "E","sets": 3, "rest": 60, "exercises":[
+          { "key": "Bodyweight Single Leg Deadlift On Bosu", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises":[
+          { "key": "Side Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Split Stance Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Dumbbell Romanian Deadlift", "do": {"reps": [10,15], "description":"", "time":-1} },
+          { "key": "Lateral Pull Down", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Dumbbell Bench Rear Delt Flyes", "do": {"reps": [15,20], "description":"", "time":-1} } ]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Plank Knee Tucks On Ball", "do": {"reps": [15,20], "description":"", "time":-1} },
+          { "key": "Elbow Knee Crunches", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Kneel On Gym Ball", "do": {"reps": [], "description":"", "time":60} } ]
+        }
+      ],
+      [
+        { "order": "A","sets": 5, "rest": 120, "exercises": [
+          { "key": "Lunges With Twist", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Press Ups", "do": {"reps": [15,25], "description":"", "time":-1} },
+          { "key": "Dumbbell Clean Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Wall Sit", "do": {"reps": [], "description":"as long as possible", "time":-1} },
+          { "key": "Press Up Position Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 30, "exercises":[
+          { "key": "Hop Onto Bosu", "do": {"reps": [], "description":"around the clock", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Double Leg Balance On Bosu", "do": {"reps": [], "description":"", "time":60} }]
+        }
+      ]
+    ]
+  },
+  {
+    "stage": "Speed",
+    "weeks": [[0,1,2],[0,1,2],[3,4,5],[3,4,5]],
+    "plans":
+    [
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises": [
+          { "key": "Dumbbell Split Squat", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Lying Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises": [
+          { "key": "Single Leg Hamstring Curl", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Seated Row Machine", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Dumbbell/Kettlebell Windmill", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Plank", "do": {"reps": [], "description":"as long as possible", "time":-1}  },
+          { "key": "Cable Woodchop High-Low", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "E","sets": 3, "rest": 60, "exercises":[
+          { "key": "Single Leg Bodyweight Deadlift", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises":[
+          { "key": "Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Kneeling Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Dumbbell Romanian Deadlift", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Lateral Pull Down", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Standing Cable Rear Delt Flyes", "do": {"reps": [15,20], "description":"", "time":-1} } ]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Single Leg Bosu Balance", "do": {"reps": [], "description":"", "time":30} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 5, "rest": 120, "exercises": [
+          { "key": "Dumbbell Squat", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Seated Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Incline Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Ankle Directional Hops", "do": {"reps": [], "description":"around the clock", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Double Leg Balance On Bosu", "do": {"reps": [], "description":"", "time":60} }]
+        }
+      ],
+
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises": [
+          { "key": "Single Leg Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "45deg Incline Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises": [
+          { "key": "Glute Thrust", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Bench Dumbbell Row", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Kneeling Static Cable Press", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Ball Roll Outs", "do": {"reps": [12,15], "description":"", "time":-1} },
+          { "key": "Cable Woodchop Low-High", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "E","sets": 3, "rest": 60, "exercises":[
+          { "key": "Bodyweight Single Leg Deadlift On Bosu", "do": {"reps": [15,20], "description":"", "time":-1} }]
+        }
+      ],
+      [
+        { "order": "A","sets": 3, "rest": 90, "exercises":[
+          { "key": "Side Step Up", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Split Stance Dumbbell Press", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 90, "exercises":[
+          { "key": "Dumbbell Romanian Deadlift", "do": {"reps": [10,15], "description":"", "time":-1} },
+          { "key": "Lateral Pull Down", "do": {"reps": [10,12], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Dumbbell Bench Rear Delt Flyes", "do": {"reps": [15,20], "description":"", "time":-1} } ]
+        },
+        { "order": "D","sets": 3, "rest": 60, "exercises":[
+          { "key": "Plank Knee Tucks On Ball", "do": {"reps": [15,20], "description":"", "time":-1} },
+          { "key": "Elbow Knee Crunches", "do": {"reps": [12,15], "description":"", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises":[
+          { "key":"Kneel On Gym Ball", "do": {"reps": [], "description":"", "time":60} } ]
+        }
+      ],
+      [
+        { "order": "A","sets": 5, "rest": 120, "exercises": [
+          { "key": "Lunges With Twist", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Press Ups", "do": {"reps": [15,25], "description":"", "time":-1} },
+          { "key": "Dumbbell Clean Press", "do": {"reps": [10,12], "description":"", "time":-1} },
+          { "key": "Wall Sit", "do": {"reps": [], "description":"as long as possible", "time":-1} },
+          { "key": "Press Up Position Plank", "do": {"reps": [], "description":"as long as possible", "time":-1} }]
+        },
+        { "order": "B", "sets": 3, "rest": 30, "exercises":[
+          { "key": "Hop Onto Bosu", "do": {"reps": [], "description":"around the clock", "time":-1} }]
+        },
+        { "order": "C", "sets": 3, "rest": 60, "exercises": [
+          { "key":"Double Leg Balance On Bosu", "do": {"reps": [], "description":"", "time":60} }]
+        }
+      ]
+    ]
+  }
+]

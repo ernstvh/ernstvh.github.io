@@ -1,0 +1,32 @@
+[
+  {
+    "month": 1,
+    "details": "Medium resistance/gearing at 100 rpm for the work period and low resistance at 60 rpm for the rest period.",
+    "sessions": [
+      { "week": 1, "reps": 6, "work": 120, "rest": 180 },
+      { "week": 2, "reps": 7, "work": 120, "rest": 180 },
+      { "week": 3, "reps": 8, "work": 120, "rest": 180 },
+      { "week": 4, "reps": 9, "work": 120, "rest": 180 }
+    ]
+  },
+  {
+    "month": 2,
+    "details": "Really high resistance/gearing at 60rpm for the work period and low-medium resistance at 60-80 rpm for the rest period.",
+    "sessions": [
+      { "week": 1, "reps": 8, "work": 60, "rest": 120 },
+      { "week": 2, "reps": 8, "work": 60, "rest": 120 },
+      { "week": 3, "reps": 10, "work": 60, "rest": 120 },
+      { "week": 4, "reps": 10, "work": 60, "rest": 120 }
+    ]
+  },
+  {
+    "month": 3,
+    "details": "Medium resistance/gearing at 120-200 rpm (as fast as your legs can possibly go) for the work period and low resistance at 60-80 rpm for the rest period.",
+    "sessions": [
+      { "week": 1, "reps": 8, "work": 45, "rest": 90 },
+      { "week": 2, "reps": 10, "work": 45, "rest": 90 },
+      { "week": 3, "reps": 12, "work": 45, "rest": 90 },
+      { "week": 4, "reps": 14, "work": 45, "rest": 190 }
+    ]
+  }
+]

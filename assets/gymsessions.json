@@ -1,0 +1,18 @@
+[
+  {"week": 1, "stage": "Correct", "plans": [ 0, 1, 2 ] },
+  {"week": 2, "stage": "Correct", "plans": [ 0, 1, 2 ] },
+  {"week": 3, "stage": "Correct", "plans": [ 3, 4, 5 ] },
+  {"week": 4, "stage": "Correct", "plans": [ 3, 4, 5 ] },
+
+  {"week": 4, "stage": "Strength", "plans": [ 0, 1, 2 ] },
+  {"week": 5, "stage": "Strength", "plans": [ 0, 1, 2 ] },
+  {"week": 6, "stage": "Strength", "plans": [ 3, 4, 5 ] },
+  {"week": 7, "stage": "Strength", "plans": [ 3, 4, 5 ] },
+
+  {"week": 8, "stage": "Speed", "plans": [ 0, 1, 2 ] },
+  {"week": 9, "stage": "Speed", "plans": [ 0, 1, 2 ] },
+  {"week": 10, "stage": "Speed", "plans": [ 3, 4, 5 ] },
+  {"week": 11, "stage": "Speed", "plans": [ 3, 4, 5 ] }
+]
+
+
