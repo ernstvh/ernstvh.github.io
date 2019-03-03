@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<p-tabView>\n  <p-tabPanel header=\"This Week\">\n    <p-accordion [multiple]=\"true\">\n      <p-accordionTab header=\"Stretches\">\n        Content 1\n      </p-accordionTab>\n      <p-accordionTab header=\"Intervals\">\n        Content 1\n      </p-accordionTab>\n      <p-accordionTab header=\"Gym Sessions\">\n        Content 1\n      </p-accordionTab>\n    </p-accordion>\n  </p-tabPanel>\n  <p-tabPanel header=\"Stretches\">\n    <p-table [value]=\"stretches\">\n      <ng-template pTemplate=\"ḧeader\">\n        <tr>\n          <th>Correctives</th>\n          <th>Sets</th>\n          <th>Reps</th>\n        </tr>\n      </ng-template>\n\n      <ng-template pTemplate=\"body\" let-stretch>\n        <tr>\n          <td>{{stretch.name}}<div [innerHtml]=\"stretch.video_iframe\"></div></td>\n          <td>{{stretch.sets}}</td>\n          <td>{{stretch.reps}}</td>\n        </tr>\n      </ng-template>\n    </p-table>\n  </p-tabPanel>\n  <p-tabPanel header=\"Intervals\">\n    <p-table [value]=\"intervals\">\n      <ng-template pTemplate=\"ḧeader\">\n        <tr>\n          <th>Session</th>\n          <th>Weeks</th>\n        </tr>\n      </ng-template>\n\n      <ng-template pTemplate=\"body\" let-interval>\n        <tr>\n          <td><b>Month {{interval.month}}</b><br/>{{interval.details}}</td>\n          <td>\n            <p-table [value]=\"interval.sessions\">\n              <ng-template pTemplate=\"header\">\n              <tr>\n                <th>Week</th>\n                <th>Reps</th>\n                <th>Work</th>\n                <th>Rest</th>\n              </tr>\n            </ng-template>\n            <ng-template pTemplate=\"body\" let-week>\n              <tr>\n                <td>Week {{week.week}}</td>\n                <td>{{week.reps}}</td>\n                <td>{{week.work}}</td>\n                <td>{{week.rest}}</td>\n              </tr>\n            </ng-template>\n          </p-table>\n          </td>\n        </tr>\n      </ng-template>\n    </p-table>\n  </p-tabPanel>\n  <p-tabPanel header=\"Gym Sessions\">\n    <p-accordion *ngFor=\"let stage of stages\">\n      <p-accordionTab header=\"{{stage.stage}}\">\n        <p-accordion *ngFor=\"let week of stage.weeks\">\n          <p-accordionTab header=\"Week {{week.week}}\">\n            <p-accordion *ngFor=\"let session of week.sessions\">\n              <p-accordionTab header=\"Session {{session.session}}\">\n                <p-table [value]=\"session.exercises\">\n                  <ng-template pTemplate=\"header\">\n                    <tr>\n                      <th>Exercises</th>\n                      <th>Weight</th>\n                      <th>Sets & Reps</th>\n                      <th>Rest</th>\n                    </tr>\n                  </ng-template>\n                  <ng-template pTemplate=\"body\" let-exercise>\n                    <tr>\n                      <td>{{exercise.order}} <a href=\"\">{{exercise.name}}</a></td>\n                      <td>last {{exercise.last_weight}} current {{exercise.current_weight}}</td>\n                      <td>{{exercise.sets}}x {{exercise.reps[0]}}-{{exercise.reps[1]}}</td>\n                      <td>{{exercise.rest}}s</td>\n                    </tr>\n                  </ng-template>\n                </p-table>\n              </p-accordionTab>\n            </p-accordion>\n          </p-accordionTab>\n        </p-accordion>\n      </p-accordionTab>\n    </p-accordion>\n  </p-tabPanel>\n  <p-tabPanel header=\"Exercises\">\n    <p-table [value]=\"exercises\">\n      <ng-template pTemplate=\"ḧeader\">\n        <tr>\n          <th>Name</th>\n        </tr>\n      </ng-template>\n\n      <ng-template pTemplate=\"body\" let-exercise>\n        <tr>\n          <td>{{exercise.name}}<div [innerHtml]=\"exercise.video_iframe\"></div></td>\n        </tr>\n      </ng-template>\n    </p-table>\n  </p-tabPanel>\n</p-tabView>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<p-tabView>\n  <p-tabPanel header=\"This Week\">\n    <app-overview></app-overview>\n  </p-tabPanel>\n  <p-tabPanel header=\"Gym Sessions\">\n    <app-sessions></app-sessions>\n  </p-tabPanel>\n  <p-tabPanel header=\"Stretches\">\n    <app-stretches></app-stretches>\n  </p-tabPanel>\n  <p-tabPanel header=\"Intervals\">\n    <app-intervals></app-intervals>\n  </p-tabPanel>\n  <p-tabPanel header=\"Exercises\">\n    <app-exercises></app-exercises>\n  </p-tabPanel>\n</p-tabView>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "\n<p-tabView>\n  <p-tabPanel header=\"This Week\">\n    <p-acc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyJ9 */"
+module.exports = ".custom .ui-scrollpanel-wrapper {\n  border-right: 9px solid #f4f4f4;\n}\n.custom .ui-scrollpanel-bar {\n  background-color: #1976d2;\n  opacity: 1;\n  transition: background-color 0.3s;\n}\n.custom .ui-scrollpanel-bar:hover {\n  background-color: #135ba1;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9tbnQvSEQvaG9tZS9lcm5zdC9Qcm9qZWN0cy9XZWJzdG9ybVByb2plY3RzL0ZpdG5lc3Mvc3JjL2FwcC9hcHAuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLCtCQUFBO0FDQ0Y7QURFQTtFQUNFLHlCQUFBO0VBQ0EsVUFBQTtFQUNBLGlDQUFBO0FDQUY7QURHQTtFQUNFLHlCQUFBO0FDREYiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tIC51aS1zY3JvbGxwYW5lbC13cmFwcGVyIHtcbiAgYm9yZGVyLXJpZ2h0OiA5cHggc29saWQgI2Y0ZjRmNDtcbn1cblxuLmN1c3RvbSAudWktc2Nyb2xscGFuZWwtYmFyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE5NzZkMjtcbiAgb3BhY2l0eTogMTtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAuM3M7XG59XG5cbi5jdXN0b20gLnVpLXNjcm9sbHBhbmVsLWJhcjpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxMzViYTE7XG59XG4iLCIuY3VzdG9tIC51aS1zY3JvbGxwYW5lbC13cmFwcGVyIHtcbiAgYm9yZGVyLXJpZ2h0OiA5cHggc29saWQgI2Y0ZjRmNDtcbn1cbi5jdXN0b20gLnVpLXNjcm9sbHBhbmVsLWJhciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxOTc2ZDI7XG4gIG9wYWNpdHk6IDE7XG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMC4zcztcbn1cbi5jdXN0b20gLnVpLXNjcm9sbHBhbmVsLWJhcjpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxMzViYTE7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -90,20 +90,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_training_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/training-content.service */ "./src/app/services/training-content.service.ts");
-
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(trainingContentService) {
-        this.trainingContentService = trainingContentService;
+    function AppComponent() {
         this.title = 'Fitness';
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.stretches = this.trainingContentService.getStretches();
-        this.intervals = this.trainingContentService.getIntervals();
-        this.stages = this.trainingContentService.getGymStages();
-        this.exercises = this.trainingContentService.getExercises();
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -111,7 +104,7 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.less */ "./src/app/app.component.less")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_training_content_service__WEBPACK_IMPORTED_MODULE_2__["TrainingContentService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());
@@ -138,11 +131,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var primeng_primeng__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primeng/primeng */ "./node_modules/primeng/primeng.js");
 /* harmony import */ var primeng_primeng__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(primeng_primeng__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/table */ "./node_modules/primeng/table.js");
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(primeng_table__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-embed-video/dist */ "./node_modules/ngx-embed-video/dist/index.js");
-/* harmony import */ var ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var primeng_spinner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/spinner */ "./node_modules/primeng/spinner.js");
+/* harmony import */ var primeng_spinner__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(primeng_spinner__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/table */ "./node_modules/primeng/table.js");
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(primeng_table__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-embed-video/dist */ "./node_modules/ngx-embed-video/dist/index.js");
+/* harmony import */ var ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var primeng_virtualscroller__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! primeng/virtualscroller */ "./node_modules/primeng/virtualscroller.js");
+/* harmony import */ var primeng_virtualscroller__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(primeng_virtualscroller__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _stretches_stretches_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./stretches/stretches.component */ "./src/app/stretches/stretches.component.ts");
+/* harmony import */ var _intervals_intervals_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./intervals/intervals.component */ "./src/app/intervals/intervals.component.ts");
+/* harmony import */ var _exercises_exercises_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./exercises/exercises.component */ "./src/app/exercises/exercises.component.ts");
+/* harmony import */ var _sessions_sessions_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./sessions/sessions.component */ "./src/app/sessions/sessions.component.ts");
+/* harmony import */ var _overview_overview_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./overview/overview.component */ "./src/app/overview/overview.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
+
+
+
+
+
+
+
 
 
 
@@ -159,16 +170,29 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _stretches_stretches_component__WEBPACK_IMPORTED_MODULE_12__["StretchesComponent"],
+                _intervals_intervals_component__WEBPACK_IMPORTED_MODULE_13__["IntervalsComponent"],
+                _exercises_exercises_component__WEBPACK_IMPORTED_MODULE_14__["ExercisesComponent"],
+                _sessions_sessions_component__WEBPACK_IMPORTED_MODULE_15__["SessionsComponent"],
+                _overview_overview_component__WEBPACK_IMPORTED_MODULE_16__["OverviewComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_17__["FormsModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["TabViewModule"],
                 primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["AccordionModule"],
-                primeng_table__WEBPACK_IMPORTED_MODULE_7__["TableModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"], ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_8__["EmbedVideo"].forRoot()
+                primeng_table__WEBPACK_IMPORTED_MODULE_8__["TableModule"],
+                primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["CardModule"],
+                primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["CarouselModule"],
+                primeng_virtualscroller__WEBPACK_IMPORTED_MODULE_11__["VirtualScrollerModule"],
+                primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["ScrollPanelModule"],
+                primeng_spinner__WEBPACK_IMPORTED_MODULE_7__["SpinnerModule"],
+                primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["LightboxModule"],
+                primeng_primeng__WEBPACK_IMPORTED_MODULE_6__["SelectButtonModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_9__["EmbedVideo"].forRoot()
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -181,18 +205,230 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/services/training-content.service.ts":
-/*!******************************************************!*\
-  !*** ./src/app/services/training-content.service.ts ***!
-  \******************************************************/
-/*! exports provided: Stretch, Interval, Exercise, IntervalSession, GymStage, GymWeek, GymSession, GymExercise, TrainingContentService */
+/***/ "./src/app/exercises/exercises.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/exercises/exercises.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p-scrollPanel [style]=\"{width:'100%', height:'600px'}\" styleClass=\"custom\">\n  <div class=\"p-grid\">\n    <div class=\"p-col-6\" *ngFor=\"let exercise of exercises\">\n      <p>{{exercise.name}}</p>\n      <img width=\"180\" [src]=\"exercise.video_img\">\n    </div>\n  </div>\n</p-scrollPanel>\n"
+
+/***/ }),
+
+/***/ "./src/app/exercises/exercises.component.less":
+/*!****************************************************!*\
+  !*** ./src/app/exercises/exercises.component.less ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2V4ZXJjaXNlcy9leGVyY2lzZXMuY29tcG9uZW50Lmxlc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/exercises/exercises.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/exercises/exercises.component.ts ***!
+  \**************************************************/
+/*! exports provided: ExercisesComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExercisesComponent", function() { return ExercisesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_training_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/training-content.service */ "./src/app/services/training-content.service.ts");
+
+
+
+var ExercisesComponent = /** @class */ (function () {
+    function ExercisesComponent(trainingContentService) {
+        this.trainingContentService = trainingContentService;
+    }
+    ExercisesComponent.prototype.ngOnInit = function () {
+        this.images = this.trainingContentService.getExercises().map(function (e) {
+            return {
+                source: "http://img.youtube.com/vi/" + e.youtube_id + "/hqdefault.jpg",
+                thumbnail: "http://img.youtube.com/vi/" + e.youtube_id + "/default.jpg",
+                title: e.name
+            };
+        });
+        this.exercises = this.trainingContentService.getExercises();
+    };
+    ExercisesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-exercises',
+            template: __webpack_require__(/*! ./exercises.component.html */ "./src/app/exercises/exercises.component.html"),
+            styles: [__webpack_require__(/*! ./exercises.component.less */ "./src/app/exercises/exercises.component.less")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_training_content_service__WEBPACK_IMPORTED_MODULE_2__["TrainingContentService"]])
+    ], ExercisesComponent);
+    return ExercisesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/intervals/intervals.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/intervals/intervals.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"p-grid\" *ngFor=\"let interval of intervals\">\n  <div class=\"p-col-6\">\n    <b>Month {{interval.month}}</b><br/>{{interval.details}}\n  </div>\n  <div class=\"p-col-6\">\n    <div class=\"p-grid\">\n      <div class=\"p-col-2\"></div>\n      <div class=\"p-col-2\">Wk</div>\n      <div class=\"p-col-2\">Rps</div>\n      <div class=\"p-col-3\">Work</div>\n      <div class=\"p-col-3\">Rest</div>\n    </div>\n    <div class=\"p-grid\" *ngFor=\"let session of interval.sessions\">\n      <div class=\"p-col-2\"></div>\n      <div class=\"p-col-2\">{{session.week}}</div>\n      <div class=\"p-col-2\">{{session.reps}}</div>\n      <div class=\"p-col-3\">{{session.work}}</div>\n      <div class=\"p-col-3\">{{session.rest}}</div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/intervals/intervals.component.less":
+/*!****************************************************!*\
+  !*** ./src/app/intervals/intervals.component.less ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ludGVydmFscy9pbnRlcnZhbHMuY29tcG9uZW50Lmxlc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/intervals/intervals.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/intervals/intervals.component.ts ***!
+  \**************************************************/
+/*! exports provided: IntervalsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntervalsComponent", function() { return IntervalsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_training_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/training-content.service */ "./src/app/services/training-content.service.ts");
+
+
+
+var IntervalsComponent = /** @class */ (function () {
+    function IntervalsComponent(trainingContentService) {
+        this.trainingContentService = trainingContentService;
+    }
+    IntervalsComponent.prototype.ngOnInit = function () {
+        this.intervals = this.trainingContentService.getIntervals();
+    };
+    IntervalsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-intervals',
+            template: __webpack_require__(/*! ./intervals.component.html */ "./src/app/intervals/intervals.component.html"),
+            styles: [__webpack_require__(/*! ./intervals.component.less */ "./src/app/intervals/intervals.component.less")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_training_content_service__WEBPACK_IMPORTED_MODULE_2__["TrainingContentService"]])
+    ], IntervalsComponent);
+    return IntervalsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/overview/overview.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/overview/overview.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p-accordion [multiple]=\"true\">\n  <div>\n    <p-selectButton [options]=\"stages\" [(ngModel)]=\"selectedStage\"></p-selectButton>\n    <p-selectButton [options]=\"weeks\" [(ngModel)]=\"selectedWeek\"></p-selectButton>\n    <p-selectButton [options]=\"sessions\" [(ngModel)]=\"selectedSession\"></p-selectButton>\n  </div>\n  <p-accordionTab header=\"Intervals\">\n    {{intervalDetails()}}\n  </p-accordionTab>\n  <p-accordionTab header=\"Gym Sessions\">\n    {{sessionDetails()}}\n  </p-accordionTab>\n</p-accordion>\n"
+
+/***/ }),
+
+/***/ "./src/app/overview/overview.component.less":
+/*!**************************************************!*\
+  !*** ./src/app/overview/overview.component.less ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL292ZXJ2aWV3L292ZXJ2aWV3LmNvbXBvbmVudC5sZXNzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/overview/overview.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/overview/overview.component.ts ***!
+  \************************************************/
+/*! exports provided: OverviewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OverviewComponent", function() { return OverviewComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_training_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/training-content.service */ "./src/app/services/training-content.service.ts");
+
+
+
+var OverviewComponent = /** @class */ (function () {
+    function OverviewComponent(trainingService) {
+        this.trainingService = trainingService;
+        this.stages = [
+            { label: "Correct", value: "0", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Strength", value: "1", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Speed", value: "2", icon: 'fa fa-fw fa-cc-paypal' }
+        ];
+        this.weeks = [
+            { label: "Week 1", value: "0", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Week 2", value: "1", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Week 3", value: "2", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Week 4", value: "3", icon: 'fa fa-fw fa-cc-paypal' }
+        ];
+        this.sessions = [
+            { label: "Session 1", value: "0", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Session 2", value: "1", icon: 'fa fa-fw fa-cc-paypal' },
+            { label: "Session 3", value: "2", icon: 'fa fa-fw fa-cc-paypal' }
+        ];
+    }
+    OverviewComponent.prototype.ngOnInit = function () {
+        this.selectedStage = "0";
+        this.selectedWeek = "0";
+        this.selectedSession = "0";
+    };
+    OverviewComponent.prototype.intervalDetails = function () {
+        var details = this.trainingService.getInterval(+this.selectedStage, +this.selectedWeek);
+        return "" + details.details;
+    };
+    OverviewComponent.prototype.sessionDetails = function () {
+        return "A session";
+    };
+    OverviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-overview',
+            template: __webpack_require__(/*! ./overview.component.html */ "./src/app/overview/overview.component.html"),
+            styles: [__webpack_require__(/*! ./overview.component.less */ "./src/app/overview/overview.component.less")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_training_content_service__WEBPACK_IMPORTED_MODULE_2__["TrainingContentService"]])
+    ], OverviewComponent);
+    return OverviewComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/training-content.service.ts":
+/*!******************************************************!*\
+  !*** ./src/app/services/training-content.service.ts ***!
+  \******************************************************/
+/*! exports provided: Exercise, Stretch, Interval, IntervalSession, GymStage, GymWeek, GymSession, GymExercise, TrainingContentService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Exercise", function() { return Exercise; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Stretch", function() { return Stretch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Interval", function() { return Interval; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Exercise", function() { return Exercise; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntervalSession", function() { return IntervalSession; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GymStage", function() { return GymStage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GymWeek", function() { return GymWeek; });
@@ -211,6 +447,7 @@ var _assets_intervals_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*
 var _assets_gymplans_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../assets/gymplans.json */ "./src/assets/gymplans.json", 1);
 /* harmony import */ var _assets_exercises_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../assets/exercises.json */ "./src/assets/exercises.json");
 var _assets_exercises_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../assets/exercises.json */ "./src/assets/exercises.json", 1);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 
 
 
@@ -218,19 +455,28 @@ var _assets_exercises_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*
 
 
 
-var Stretch = /** @class */ (function () {
-    function Stretch(name, sets, reps, video_iframe) {
+
+var Exercise = /** @class */ (function () {
+    function Exercise(name, youtube_id) {
         this.name = name;
-        this.sets = sets;
-        this.reps = reps;
-        this.video_iframe = video_iframe;
+        this.youtube_id = youtube_id;
     }
-    Stretch = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Exercise = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [String, Number, Number, Object])
-    ], Stretch);
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [String, String])
+    ], Exercise);
+    return Exercise;
+}());
+
+var Stretch = /** @class */ (function () {
+    function Stretch(name, sets, reps, youtube_id) {
+        this.name = name;
+        this.sets = sets;
+        this.reps = reps;
+        this.youtube_id = youtube_id;
+    }
     return Stretch;
 }());
 
@@ -241,16 +487,6 @@ var Interval = /** @class */ (function () {
         this.sessions = sessions;
     }
     return Interval;
-}());
-
-var Exercise = /** @class */ (function () {
-    function Exercise(name, video_iframe, img_tag, video_link) {
-        this.name = name;
-        this.video_iframe = video_iframe;
-        this.img_tag = img_tag;
-        this.video_link = video_link;
-    }
-    return Exercise;
 }());
 
 var IntervalSession = /** @class */ (function () {
@@ -305,25 +541,33 @@ var GymExercise = /** @class */ (function () {
 }());
 
 var TrainingContentService = /** @class */ (function () {
-    function TrainingContentService(embedService) {
+    function TrainingContentService(embedService, sanitizer) {
         this.embedService = embedService;
+        this.sanitizer = sanitizer;
     }
     TrainingContentService.prototype.getStretches = function () {
-        var _this = this;
-        return _assets_stretches_json__WEBPACK_IMPORTED_MODULE_3__.map(function (s) { return new Stretch(s.name, s.sets, s.reps, _this.embedService.embed_youtube(s.youtube_id)); });
-        // return [
-        //   new Stretch('Overhead Squat', 1, 10, this.embedService.embed_youtube("MLn4aIfuu_k")),
-        //   new Stretch('Prone Shoulder Press', 1, 10, this.embedService.embed_youtube("LQ3DugTAOo8"))
-        // ]
+        return _assets_stretches_json__WEBPACK_IMPORTED_MODULE_3__.map(function (s) { return new Stretch(s.name, s.sets, s.reps, s.youtube_id); });
+        // this.sanitizer.bypassSecurityTrustResourceUrl(`https://img.youtube.com/vi/${s.youtube_id}/hqdefault.jpg`),
+        // this.embedService.embed_youtube(s.youtube_id)));
     };
     TrainingContentService.prototype.getIntervals = function () {
         return _assets_intervals_json__WEBPACK_IMPORTED_MODULE_4__.map(function (s) { return new Interval(s.month, s.details, s.sessions.map(function (k) { return new IntervalSession(k.week, k.reps, k.work, k.rest); })); });
     };
     TrainingContentService.prototype.getExercises = function () {
-        var _this = this;
-        var e = _assets_exercises_json__WEBPACK_IMPORTED_MODULE_6__.map(function (e) { return new Exercise(e.name, _this.embedService.embed_youtube(e.youtube_id), "http://img.youtube.com/vi/" + e.youtube_id + "/default.jpg", "http://youtu.be/" + e.youtube_id); });
-        console.log(e);
+        var e = _assets_exercises_json__WEBPACK_IMPORTED_MODULE_6__.map(function (e) { return new Exercise(e.name, e.youtube_id); });
+        // this.embedService.embed_youtube(e.youtube_id),
+        // this.sanitizer.bypassSecurityTrustResourceUrl(`http://img.youtube.com/vi/${e.youtube_id}/hqdefault.jpg`),
+        // `http://youtu.be/${e.youtube_id}`,
+        // this.sanitizer.bypassSecurityTrustResourceUrl(`http://youtube.com/embed/${e.youtube_id}`)));
         return e;
+    };
+    TrainingContentService.prototype.getGymSession = function (stage, week, session) {
+        return this.getGymStages()[stage].weeks[week].sessions[session];
+    };
+    TrainingContentService.prototype.getInterval = function (stage, week) {
+        var interval = this.getIntervals()[stage];
+        var sessions = interval.sessions.filter(function (i) { return i.week == week; });
+        return new Interval(interval.month, interval.details, sessions);
     };
     TrainingContentService.prototype.getGymStages = function () {
         var plans = _assets_gymplans_json__WEBPACK_IMPORTED_MODULE_5__;
@@ -351,9 +595,145 @@ var TrainingContentService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_2__["EmbedVideoService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_embed_video_dist__WEBPACK_IMPORTED_MODULE_2__["EmbedVideoService"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_7__["DomSanitizer"]])
     ], TrainingContentService);
     return TrainingContentService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/sessions/sessions.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/sessions/sessions.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p-scrollPanel [style]=\"{width:'100%', height:'600px'}\" styleClass=\"custom\">\n  <div *ngFor=\"let stage of stages\">\n    <h2>{{stage.stage}}</h2>\n    <div *ngFor=\"let week of stage.weeks\">\n      <div *ngFor=\"let session of week.sessions\">\n        <p-accordion>\n          <p-accordionTab header=\"Week {{week.week}} Session {{session.session}}\">\n            <div class=\"p-grid\">\n              <div class=\"p-col\">Exercise</div>\n              <div class=\"p-col-fixed\" style=\"width:100px\">Weight</div>\n            </div>\n            <div class=\"p-grid\" *ngFor=\"let exercise of session.exercises\">\n              <div class=\"p-col\">\n                <div>\n                  {{exercise.order}} {{exercise.name}}\n                  <!--<p-lightbox type=\"content\">-->\n                  <!--<a class=\"group\" href=\"\">{{exercise.name}}</a>-->\n                  <!--&lt;!&ndash;<div [innerHtml]=\"exercise.video_iframe\"></div>&ndash;&gt;-->\n                  <!--</p-lightbox>-->\n                </div>\n                <div>{{exercise.sets}}x {{exercise.reps[0]}}-{{exercise.reps[1]}}, {{exercise.rest}}s</div>\n              </div>\n              <div class=\"p-col-fixed\" style=\"width:100px\" >\n                <p-spinner size=\"3\" (value)=\"exercise.current_weight\" min=\"0\">{{exercise.current_weight}}</p-spinner>\n              </div>\n            </div>\n          </p-accordionTab>\n        </p-accordion>\n      </div>\n    </div>\n  </div>\n</p-scrollPanel>\n"
+
+/***/ }),
+
+/***/ "./src/app/sessions/sessions.component.less":
+/*!**************************************************!*\
+  !*** ./src/app/sessions/sessions.component.less ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Nlc3Npb25zL3Nlc3Npb25zLmNvbXBvbmVudC5sZXNzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/sessions/sessions.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/sessions/sessions.component.ts ***!
+  \************************************************/
+/*! exports provided: SessionsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SessionsComponent", function() { return SessionsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_training_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/training-content.service */ "./src/app/services/training-content.service.ts");
+
+
+
+var SessionsComponent = /** @class */ (function () {
+    function SessionsComponent(trainingContentService) {
+        this.trainingContentService = trainingContentService;
+    }
+    SessionsComponent.prototype.ngOnInit = function () {
+        this.stages = this.trainingContentService.getGymStages();
+    };
+    SessionsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-sessions',
+            template: __webpack_require__(/*! ./sessions.component.html */ "./src/app/sessions/sessions.component.html"),
+            styles: [__webpack_require__(/*! ./sessions.component.less */ "./src/app/sessions/sessions.component.less")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_training_content_service__WEBPACK_IMPORTED_MODULE_2__["TrainingContentService"]])
+    ], SessionsComponent);
+    return SessionsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/stretches/stretches.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/stretches/stretches.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p-scrollPanel [style]=\"{width:'100%', height:'600px'}\" styleClass=\"custom\">\n  <div class=\"p-grid\">\n    <div class=\"p-col-6\" *ngFor=\"let stretch of stretches\">\n      <p>{{stretch.name}}</p>\n      <img width=\"180\" [src]=\"stretch.video_img\">\n    </div>\n  </div>\n</p-scrollPanel>\n"
+
+/***/ }),
+
+/***/ "./src/app/stretches/stretches.component.less":
+/*!****************************************************!*\
+  !*** ./src/app/stretches/stretches.component.less ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N0cmV0Y2hlcy9zdHJldGNoZXMuY29tcG9uZW50Lmxlc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/stretches/stretches.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/stretches/stretches.component.ts ***!
+  \**************************************************/
+/*! exports provided: StretchesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StretchesComponent", function() { return StretchesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_training_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/training-content.service */ "./src/app/services/training-content.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
+
+
+
+var StretchesComponent = /** @class */ (function () {
+    function StretchesComponent(trainingContentService, sanitizer) {
+        this.trainingContentService = trainingContentService;
+        this.sanitizer = sanitizer;
+    }
+    StretchesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.stretches = this.trainingContentService.getStretches().map(function (s) {
+            return {
+                "name": s.name,
+                "reps": s.reps,
+                "sets": s.sets,
+                "video_img": _this.youtubify(s.youtube_id),
+            };
+        });
+        // });
+    };
+    StretchesComponent.prototype.youtubify = function (id) {
+        this.sanitizer.bypassSecurityTrustResourceUrl("http://img.youtube.com/vi/" + id + "/hqdefault.jpg");
+    };
+    StretchesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-stretches',
+            template: __webpack_require__(/*! ./stretches.component.html */ "./src/app/stretches/stretches.component.html"),
+            styles: [__webpack_require__(/*! ./stretches.component.less */ "./src/app/stretches/stretches.component.less")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_training_content_service__WEBPACK_IMPORTED_MODULE_2__["TrainingContentService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
+    ], StretchesComponent);
+    return StretchesComponent;
 }());
 
 
@@ -389,7 +769,7 @@ module.exports = [{"stage":"Correct","weeks":[[0,1,2],[0,1,2],[3,4,5],[3,4,5]],"
 /*! exports provided: 0, 1, 2, default */
 /***/ (function(module) {
 
-module.exports = [{"month":1,"details":"Medium resistance/gearing at 100 rpm for the work period and low resistance at 60 rpm for the rest period.","sessions":[{"week":1,"reps":6,"work":120,"rest":180},{"week":2,"reps":7,"work":120,"rest":180},{"week":3,"reps":8,"work":120,"rest":180},{"week":4,"reps":9,"work":120,"rest":180}]},{"month":2,"details":"Really high resistance/gearing at 60rpm for the work period and low-medium resistance at 60-80 rpm for the rest period.","sessions":[{"week":1,"reps":8,"work":60,"rest":120},{"week":2,"reps":8,"work":60,"rest":120},{"week":3,"reps":10,"work":60,"rest":120},{"week":4,"reps":10,"work":60,"rest":120}]},{"month":3,"details":"Medium resistance/gearing at 120-200 rpm (as fast as your legs can possibly go) for the work period and low resistance at 60-80 rpm for the rest period.","sessions":[{"week":1,"reps":8,"work":45,"rest":90},{"week":2,"reps":10,"work":45,"rest":90},{"week":3,"reps":12,"work":45,"rest":90},{"week":4,"reps":14,"work":45,"rest":190}]}];
+module.exports = [{"month":1,"details":"Medium resistance/gearing at 100 rpm for the work period and low resistance at 60 rpm for the rest period.","sessions":[{"week":1,"reps":6,"work":120,"rest":180},{"week":2,"reps":7,"work":120,"rest":180},{"week":3,"reps":8,"work":120,"rest":180},{"week":4,"reps":9,"work":120,"rest":180}]},{"month":2,"details":"Really high resistance/gearing at 60rpm for the work period and low-medium resistance at 60-80 rpm for the rest period.","sessions":[{"week":1,"reps":8,"work":60,"rest":120},{"week":2,"reps":8,"work":60,"rest":120},{"week":3,"reps":10,"work":60,"rest":120},{"week":4,"reps":10,"work":60,"rest":120}]},{"month":3,"details":"Medium resistance/gearing at 120-200 rpm (as fast as your legs can possibly go) for the work period and low resistance at 60-80 rpm for the rest period.","sessions":[{"week":1,"reps":8,"work":45,"rest":90},{"week":2,"reps":10,"work":45,"rest":90},{"week":3,"reps":12,"work":45,"rest":90},{"week":4,"reps":14,"work":45,"rest":90}]}];
 
 /***/ }),
 
